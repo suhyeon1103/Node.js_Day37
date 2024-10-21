@@ -1,0 +1,21 @@
+### 사용자 등록 (Signup)
+POST http://localhost:8000/signup
+Content-Type: application/json
+
+{
+    "email": "user@example.com",
+    "password": "securepassword"
+}
+
+### 사용자 로그인 (Login)
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email": "user@example.com",
+    "password": "securepassword"
+}
+
+### 보호된 라우트 접근 (Protected Route)
+GET http://localhost:8000/protected
+Authorization: Bearer {{token}}
